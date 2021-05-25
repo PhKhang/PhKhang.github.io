@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@302&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab&display=swap');
+
+@keyframes backcolor{
+	from {background-color: lightskyblue;}
+	to {background-color: #5BBDFA;}
+}
+
+body {
+	animation-name: backcolor;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+p.thefirstline {
+	font-family: Pacifico, sans-serif;
+	font-weight: bolder;
+	font-size: 80px;
+	text-align: center;
+}
+
+.tho {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 5x50;
+	padding-left: 15%;
+	font-size: 20px;
+}
