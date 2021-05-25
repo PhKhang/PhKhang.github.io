@@ -26,6 +26,11 @@ p.thefirstline {
 	padding-left: 25%;
 	font-size: 20px;
 }
+@media only screen and (max-width: 4cm) {
+  .tho {
+  	padding-left: 2%;
+  }
+}
 
 img {
 	width: 100%;
