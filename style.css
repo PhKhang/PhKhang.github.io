@@ -27,12 +27,12 @@ p.thefirstline {
 	font-weight: 5x50;
 	font-size: 20px;
 }
-@media only screen and (max-width: 800px) {
+/*@media only screen and (max-width: 800px) {
   .tho {
   	background-color: burlywood;
   	padding-left: 0%;
   }
-}
+}*/
 
 img {
 	width: 100%;
