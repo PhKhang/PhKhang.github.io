@@ -25,7 +25,7 @@ p.thefirstline {
 	padding-left: 25%;
 	font-size: 20px;
 }
-@media only screen and (min-width: 1080px) {
+@media only screen and (max-width: 13cm) {
   .tho {
   	padding-left: 2%;
   }
