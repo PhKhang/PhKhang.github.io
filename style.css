@@ -43,8 +43,12 @@ img {
     object-fit: cover;
 }
 
-/*@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
 .tho {
-background-color: burlywood;
+    font-size: 1.25rem;
+    background-color:antiquewhite
 }
-}*/
+p.thefirstline {
+    font-size: 4rem;
+}
+}
