@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab&display=swap');
 
 @keyframes backcolor {
-	from {
+    from {
         background-color: lightskyblue;
     }
 
@@ -44,11 +44,12 @@ img {
 }
 
 @media only screen and (max-width: 800px) {
-.tho {
-    font-size: 1.25rem;
-    background-color:antiquewhite
-}
-p.thefirstline {
-    font-size: 4rem;
-}
+    .tho {
+        font-size: 1.25rem;
+        background-color: antiquewhite
+    }
+
+    p.thefirstline {
+        font-size: 4rem;
+    }
 }
