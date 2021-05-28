@@ -46,7 +46,7 @@ img {
 @media only screen and (max-width: 800px) {
     .tho {
         font-size: 1.25rem;
-        background-color: antiquewhite
+        background-color: antiquewhite;
     }
 
     p.thefirstline {
