@@ -31,7 +31,7 @@ p.thefirstline {
 .tho {
     margin-left: auto;
     margin-right: auto;
-    width: fit-content;
+    width: max-content;
     font-family: 'Roboto Slab', serif;
     font-weight: 550;
     font-size: 1.5rem;
