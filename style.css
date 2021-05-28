@@ -43,7 +43,7 @@ img {
     object-fit: cover;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) and (orientation: portrait) {
     .tho {
         font-size: 1.25rem;
         background-color: antiquewhite;
