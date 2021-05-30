@@ -30,8 +30,14 @@ body {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+.hop { width: 100%;
+    display: flex;
+}
 
-p.thefirstline {
+
+.thefirstline {
+    width: 350px;
+    flex: 1 1 auto;
     font-family: Pacifico, sans-serif;
     font-weight: bolder;
     font-size: 5rem;
@@ -39,6 +45,7 @@ p.thefirstline {
 }
 
 .tho {
+    flex: 1 1 auto;
     margin-left: auto;
     margin-right: auto;
     width: max-content;
@@ -59,8 +66,12 @@ img {
         background-color: antiquewhite;
     }
 
-    p.thefirstline {
+    .thefirstline {
         font-size: 4rem;
+    }
+    .hop {
+        justify-content: space-between;
+        flex-direction: column;
     }
 }
 
