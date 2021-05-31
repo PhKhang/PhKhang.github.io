@@ -24,6 +24,8 @@ body::-webkit-scrollbar-thumb {
     background: darkblue;
 }
 
+
+
 body {
     animation-name: backcolor;
     animation-duration: 2s;
@@ -32,15 +34,22 @@ body {
 }
 .hop { width: 100%;
     display: flex;
+    align-items:center;
 }
 
 
 .thefirstline {
     width: 350px;
     flex: 1 1 auto;
+    display: inline-table;
     font-family: Pacifico, sans-serif;
     font-weight: bolder;
     font-size: 5rem;
+    text-align: center;
+}
+.thefirstline p {
+    display: table-cell;
+    vertical-align: middle;
     text-align: center;
 }
 
