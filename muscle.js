@@ -7,6 +7,7 @@ window.onload = function () {
     /* var x = document.getElementsByClassName("week1")[0].getElementsByClassName("thu2")[0];
     x.innerHTML = 67; */
 
+    document.head.title.innerHTML = dt.getMonth();
     var week = ["week1", "week2", "week3", "week4", "week5", "week6"];
     var iOfWeek=0;
     var days = ["thu8", "thu2", "thu3", "thu4", "thu5", "thu6", "thu7"];
