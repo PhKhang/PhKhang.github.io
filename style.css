@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 :root{
-  --sideOfDate: calc(0.096 * 500px);
+  --sideOfDate: calc(0.094 * 500px);
   font-size: 20px;
   font-family: 'Roboto Slab', serif;
 }
@@ -45,11 +45,12 @@ content {
   height: var(--sideOfDate);
   width: var(--sideOfDate);
   border-radius: 50%;
-  background-color: #C3D4F6;
+  background-color: hsl(221, 75%, 86%);
   box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33);
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 0px;
 }
 .thu8, .nameofdays > :last-child {
   background-color: hsl(3, 100%, 87%);

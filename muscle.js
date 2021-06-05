@@ -15,8 +15,16 @@ window.onload = function () {
         var ngay = new Date(dt.getFullYear(),dt.getMonth(),i);
         console.log(days[ngay.getDay()] + " ");
         document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].innerHTML = i;
+        if (ngay.getDate() == dt.getDate()){
+            if (dt.getDay()!=0){document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].style.cssText = "box-sizing: border-box; border: 2px solid #C3D4F6; box-shadow: inset -5px -5px 6px rgba(255, 255, 255, 0.5), inset 5px 5px 6px rgba(0, 0, 0, 0.33),-5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33); background-color: hsl(221, 75%, 78%)";}
+            else document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].style.cssText = "box-sizing: border-box; border: 2px solid hsl(3, 100%, 87%); box-shadow: inset -5px -5px 6px rgba(255, 255, 255, 0.5), inset 5px 5px 6px rgba(0, 0, 0, 0.33),-5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33); background-color: hsl(3, 100%, 78%)";
+        }
         if (ngay.getDay()==0) {iOfWeek++;}
     }
+    for (iOfWeek++; iOfWeek < 6; iOfWeek++){
+        document.getElementsByClassName(week[iOfWeek])[0].style.visibility = "hidden";
+    } 
+    
 }
 
 
