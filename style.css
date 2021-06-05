@@ -52,7 +52,7 @@ content {
   justify-content: center;
 }
 .thu8, .nameofdays > :last-child {
-  background-color: blue;
+  background-color: hsl(3, 100%, 87%);
 }
 .nameofdays > * {
   height: auto;
