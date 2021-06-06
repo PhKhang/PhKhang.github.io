@@ -1,4 +1,4 @@
-var dt = new Date(2021, 1, 8);
+var dt = new Date();
 var lastday = function (y, m) {
     return new Date(y, m + 1, 0).getDate();
 }
@@ -24,10 +24,7 @@ window.onload = function () {
     for (iOfWeek++; iOfWeek < 6; iOfWeek++){
         document.getElementsByClassName(week[iOfWeek])[0].style.visibility = "hidden";
     } 
-    
 }
-
-
 /* var dayofweek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sar", "Sun"]
 document.write("getDay() : " + dayofweek[dt.getDay()]);
 console.log(dayofweek[dt.getDay()]); */
