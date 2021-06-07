@@ -28,6 +28,11 @@ function thangsau() {
     chinh();
     document.getElementById("thang").innerHTML = "Tháng " + (thangmoi + 1) + ', ' + nammoi;
 }
+function baygio(){
+    dt = new Date();
+    chinh();
+    document.getElementById("thang").innerHTML = "Tháng " + (dt.getMonth() + 1) + ', ' + dt.getFullYear();
+}
 function chinh() {
     var week = ["week1", "week2", "week3", "week4", "week5", "week6"];
     var iOfWeek = 0;
