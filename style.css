@@ -1,22 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 
-:root{
+:root {
   --sideOfDate: calc(0.094 * 500px);
+  --foregroundColor: hsl(220, 74%, 80%);
   font-size: 20px;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 }
 body {
-  background-color: #C3D4F6;
+  background-color: var(--foregroundColor);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+#thang {
+  margin: 10px;
+  font-size: 1.3rem;
+}
 main {
-  background-color: #C3D4F6;
+  background-color: var(--foregroundColor);
   height: 500px;
   width: 500px;
-  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.33), inset 5px 5px 10px rgba(0, 0, 0, 0.33);
+  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.33),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.33);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -24,15 +29,22 @@ main {
 content {
   margin: 20px;
   display: block;
-  background-color: #C3D4F6;
+  background-color: var(--foregroundColor);
   min-height: 500px;
   width: 500px;
-  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5), inset 5px 5px 10px rgba(0, 0, 0, 0.33);
+  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.33);
   border-radius: 10px;
 }
 
-
-.week1, .week2,.week3, .week4,.week5, .week6, .nameofdays {
+.week1,
+.week2,
+.week3,
+.week4,
+.week5,
+.week6,
+.nameofdays,
+.nut {
   width: 100%;
   height: 16.6%;
   display: flex;
@@ -41,33 +53,50 @@ content {
   justify-content: space-around;
 }
 
-.week1 > *, .week2 > *, .week3 > *, .week4 > *, .week5 > *, .week6 > * {
+.week1 > *,
+.week2 > *,
+.week3 > *,
+.week4 > *,
+.week5 > *,
+.week6 > * {
   height: var(--sideOfDate);
   width: var(--sideOfDate);
   border-radius: 50%;
-  background-color: hsl(221, 75%, 86%);
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33);
+  background-color: var(--foregroundColor);
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    5px 5px 10px rgba(0, 0, 0, 0.33);
   display: flex;
   align-items: center;
   justify-content: center;
   border: 0px;
 }
-.thu8, .nameofdays > :last-child {
+.thu8,
+.nameofdays > :last-child {
   background-color: hsl(3, 100%, 87%);
 }
-.nameofdays > * {
+.nameofdays > *,
+.nut > * {
   height: auto;
-  width: calc(1.14*var(--sideOfDate));
-  border-radius: calc(0.3*var(--sideOfDate));
-  background-color: #C3D4F6;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33);
+  width: calc(1.14 * var(--sideOfDate));
+  border-radius: calc(0.3 * var(--sideOfDate));
+  background-color: var(--foregroundColor);
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    5px 5px 10px rgba(0, 0, 0, 0.33);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.2rem 0rem 0.2rem 0rem;
 }
+.nut {
+  width: 250px;
+  height: min-content;
+}
+.nut > * {
+  font-weight: bold;
+  margin: 15px;
+}
 
-@media only screen and (max-width: 510px)  {
+@media only screen and (max-width: 510px) {
   main {
     width: 90vw;
     height: 90vw;
@@ -76,7 +105,14 @@ content {
     width: 90vw;
     height: 90vw;
   }
-  :root{
+  .nut {
+    width: 90vw;
+  }
+  .nut > * {
+    padding: 10px;
+    border-radius: 20px;
+  }
+  :root {
     --sideOfDate: calc(0.096 * 100vw);
     font-size: 4vw;
   }
