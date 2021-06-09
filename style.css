@@ -2,29 +2,43 @@
 
 :root {
   --sideOfDate: calc(0.094 * 500px);
-  --foregroundColor: hsl(110, 75%, 80%);
+  --foregroundColor: hsl(0, 0%, 100%);
   font-size: 20px;
   font-family: "Roboto Slab", serif;
+  --shadowLower: none;
+  --shadowUpper: none; 
+  --transTime: 0.3s;
+  transition: background-color var(--transTime), box-shadow var(--transTime);
+}
+.pastel {
+  --foregroundColor: hsl(110, 75%, 80%);
+  --shadowLower: inset -5px -5px 10px rgba(255, 255, 255, 0.33),
+  inset 5px 5px 10px rgba(0, 0, 0, 0.33);
+  --shadowUpper: -5px -5px 10px rgba(255, 255, 255, 0.5),
+  5px 5px 10px rgba(0, 0, 0, 0.33);
 }
 body {
   background-color: var(--foregroundColor);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color var(--transTime) ease-in-out, box-shadow var(--transTime);
 }
+
 #thang {
   margin: 10px;
   font-size: 1.3rem;
 }
+
 main {
   background-color: var(--foregroundColor);
   height: 500px;
   width: 500px;
-  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.33),
-    inset 5px 5px 10px rgba(0, 0, 0, 0.33);
+  box-shadow: var(--shadowLower);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  transition: background-color var(--transTime), box-shadow var(--transTime);
 }
 content {
   margin: 20px;
@@ -32,9 +46,9 @@ content {
   background-color: var(--foregroundColor);
   min-height: 500px;
   width: 500px;
-  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5),
-    inset 5px 5px 10px rgba(0, 0, 0, 0.33);
+  box-shadow: var(--shadowLower);
   border-radius: 10px;
+  transition: background-color var(--transTime), box-shadow var(--transTime);
 }
 
 .week1,
@@ -63,16 +77,17 @@ content {
   width: var(--sideOfDate);
   border-radius: 50%;
   background-color: var(--foregroundColor);
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
-    5px 5px 10px rgba(0, 0, 0, 0.33);
+  box-shadow: var(--shadowUpper);
   display: flex;
   align-items: center;
   justify-content: center;
   border: 0px;
+  transition: background-color var(--transTime), box-shadow var(--transTime);
 }
 .thu8,
 .nameofdays > :last-child {
   background-color: hsl(3, 100%, 87%);
+  transition: background-color var(--transTime), box-shadow var(--transTime);
 }
 .nameofdays > *,
 .nut > * {
@@ -80,19 +95,18 @@ content {
   width: calc(1.14 * var(--sideOfDate));
   border-radius: calc(0.3 * var(--sideOfDate));
   background-color: var(--foregroundColor);
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
-    5px 5px 10px rgba(0, 0, 0, 0.33);
+  box-shadow: var(--shadowUpper);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.2rem 0rem 0.2rem 0rem;
+  transition: background-color var(--transTime), box-shadow var(--transTime);
 }
 .nut {
   width: 350px;
   height: min-content;
 }
 .nut > * {
-  font-weight: bold;
   margin: 15px;
 }
 

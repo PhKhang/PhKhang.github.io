@@ -4,8 +4,14 @@ var nammoi = 0;
 var lastday = function (y, m) {
     return new Date(y, m + 1, 0).getDate();
 }
-
+document.getElementById('light').onclick = function() {
+    document.body.classList.replace("pastel","light");
+};
+document.getElementById("pastel").onclick = () => {
+    document.body.classList.replace("light","pastel");
+}
 window.onload = function () {
+    
     thangmoi = dt.getMonth();
     nammoi = dt.getFullYear();
     document.getElementById("thang").innerHTML = "Tháng " + (thangmoi + 1) + ', ' + nammoi;
@@ -61,3 +67,4 @@ function chinh() {
         document.getElementsByClassName(week[iOfWeek])[0].style.visibility = "hidden";
     }
 }
+
