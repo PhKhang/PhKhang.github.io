@@ -2,7 +2,7 @@
 
 :root {
   --sideOfDate: calc(0.094 * 500px);
-  --foregroundColor: hsl(220, 74%, 80%);
+  --foregroundColor: hsl(110, 75%, 80%);
   font-size: 20px;
   font-family: "Roboto Slab", serif;
 }
@@ -88,7 +88,7 @@ content {
   padding: 0.2rem 0rem 0.2rem 0rem;
 }
 .nut {
-  width: 250px;
+  width: 350px;
   height: min-content;
 }
 .nut > * {

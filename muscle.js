@@ -30,6 +30,8 @@ function thangsau() {
 }
 function baygio(){
     dt = new Date();
+    thangmoi = dt.getMonth();
+    nammoi = dt.getFullYear();
     chinh();
     document.getElementById("thang").innerHTML = "Tháng " + (dt.getMonth() + 1) + ', ' + dt.getFullYear();
 }
@@ -49,7 +51,7 @@ function chinh() {
         document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].style = "border: 0px;";
 
         if (ngay.getDate() == dt.getDate()) {
-            if (dt.getDay() != 0) { document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].style.cssText = "box-sizing: border-box; border: 2px solid var(--foregroundColor); box-shadow: inset -5px -5px 6px rgba(255, 255, 255, 0.5), inset 5px 5px 6px rgba(0, 0, 0, 0.33),-5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33); background-color: hsl(221, 75%, 78%)"; }
+            if (dt.getDay() != 0) { document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].style.cssText = "box-sizing: border-box; border: 2px solid var(--foregroundColor); box-shadow: inset -5px -5px 6px rgba(255, 255, 255, 0.5), inset 5px 5px 6px rgba(0, 0, 0, 0.33),-5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33); background-color: var(--foregroundColor)"; }
             else document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].style.cssText = "box-sizing: border-box; border: 2px solid hsl(3, 100%, 87%); box-shadow: inset -5px -5px 6px rgba(255, 255, 255, 0.5), inset 5px 5px 6px rgba(0, 0, 0, 0.33),-5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33); background-color: hsl(3, 100%, 78%)";
         }
         document.getElementsByClassName(week[iOfWeek])[0].style.visibility = "visible";

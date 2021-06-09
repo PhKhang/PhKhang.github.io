@@ -5,12 +5,13 @@
   <title>Calendar</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <script src="muscle.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
   
-    <main>
+    <main style="user-select: none;">
       <p id="thang" ></p>
       <div class="nameofdays">
         <div>Mon</div>
@@ -78,9 +79,10 @@
     </main>
     <content>
       <div class="nut">
-        <div onclick="thangtruoc()" style="cursor: pointer;">-</div>
-        <div onclick="thangsau()" style="cursor: pointer;">+</div>
-        <div onclick="baygio()" style="cursor: pointer;">*</div>
+        <div onclick="thangtruoc()" style="cursor: pointer;"><span class="material-icons" style="user-select: none;">arrow_back_ios_new</span></div>
+        <div onclick="thangsau()" style="cursor: pointer;"><span class="material-icons" style="user-select: none; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg);">arrow_back_ios_new</span></div>
+        <div onclick="baygio()" style="cursor: pointer;"><span class="material-icons" style="user-select: none;">today</span></div>
+        <div onclick="baygio()" style="cursor: pointer;"><span class="material-icons" style="user-select: none;">date_range</span></div>
       </div>
       <div class="content" style="padding: 10px;"></div>
     </content>
