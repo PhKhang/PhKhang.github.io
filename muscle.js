@@ -4,19 +4,19 @@ var nammoi = 0;
 var lastday = function (y, m) {
     return new Date(y, m + 1, 0).getDate();
 }
-document.getElementById('light').onclick = function() {
-    document.body.classList.replace("pastel","light");
+document.getElementById('light').onclick = function () {
+    document.body.classList.replace("pastel", "light");
 };
 document.getElementById("pastel").onclick = () => {
-    document.body.classList.replace("light","pastel");
+    document.body.classList.replace("light", "pastel");
 }
 window.onload = function () {
-    
+
     thangmoi = dt.getMonth();
     nammoi = dt.getFullYear();
     document.getElementById("thang").innerHTML = "Tháng " + (thangmoi + 1) + ', ' + nammoi;
     chinh();
-    
+
 
 }
 
@@ -34,7 +34,7 @@ function thangsau() {
     chinh();
     document.getElementById("thang").innerHTML = "Tháng " + (thangmoi + 1) + ', ' + nammoi;
 }
-function baygio(){
+function baygio() {
     dt = new Date();
     thangmoi = dt.getMonth();
     nammoi = dt.getFullYear();
@@ -45,8 +45,8 @@ function chinh() {
     var week = ["week1", "week2", "week3", "week4", "week5", "week6"];
     var iOfWeek = 0;
     var days = ["thu8", "thu2", "thu3", "thu4", "thu5", "thu6", "thu7"];
-    for (var a=0; a<6; a++){
-        for (var b=0; b<7; b++){
+    for (var a = 0; a < 6; a++) {
+        for (var b = 0; b < 7; b++) {
             document.getElementsByClassName(week[a])[0].getElementsByClassName(days[b])[0].innerHTML = '';
         }
     }

@@ -7,7 +7,7 @@
   font-family: "Roboto Slab", serif;
   --shadowLower: none;
   --shadowUpper: none; 
-  --transTime: 0.3s;
+  --transTime: 0.1s;
   transition: background-color var(--transTime), box-shadow var(--transTime);
 }
 .pastel {
