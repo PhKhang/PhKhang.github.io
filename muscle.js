@@ -5,10 +5,16 @@ var lastday = function (y, m) {
     return new Date(y, m + 1, 0).getDate();
 }
 document.getElementById('light').onclick = function () {
+    document.body.classList.replace("dark", "light");
     document.body.classList.replace("pastel", "light");
 };
+document.getElementById("dark").onclick = () => {
+    document.body.classList.replace("light", "dark");
+    document.body.classList.replace("pastel", "dark");
+}
 document.getElementById("pastel").onclick = () => {
     document.body.classList.replace("light", "pastel");
+    document.body.classList.replace("dark", "pastel");
 }
 window.onload = function () {
 
@@ -54,11 +60,11 @@ function chinh() {
         var ngay = new Date(dt.getFullYear(), dt.getMonth(), i);
         console.log(ngay.getDate() + " ");
         document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].innerHTML = i;
-        document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].style = "border: 0px;";
+        document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].classList.remove("today");
 
         if (ngay.getDate() == dt.getDate()) {
-            if (dt.getDay() != 0) { document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].style.cssText = "box-sizing: border-box; border: 2px solid var(--foregroundColor); box-shadow: inset -5px -5px 6px rgba(255, 255, 255, 0.5), inset 5px 5px 6px rgba(0, 0, 0, 0.33),-5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33); background-color: var(--foregroundColor)"; }
-            else document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].style.cssText = "box-sizing: border-box; border: 2px solid hsl(3, 100%, 87%); box-shadow: inset -5px -5px 6px rgba(255, 255, 255, 0.5), inset 5px 5px 6px rgba(0, 0, 0, 0.33),-5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33); background-color: hsl(3, 100%, 78%)";
+            if (dt.getDay() != 0) { document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].classList.add("today") ; }
+            else document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].classList.add("today") ;
         }
         document.getElementsByClassName(week[iOfWeek])[0].style.visibility = "visible";
         if (ngay.getDay() == 0 && ngay.getDate() != lastday(dt.getFullYear(), dt.getMonth())) { iOfWeek++; }

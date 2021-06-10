@@ -2,23 +2,45 @@
 
 :root {
   --sideOfDate: calc(0.094 * 500px);
-  --foregroundColor: hsl(0, 0%, 100%);
+  --foregroundColor: /* hsl(0, 68%, 69%) */ white;
+  --backgroundColor: var(--foregroundColor); 
   font-size: 20px;
   font-family: "Roboto Slab", serif;
   --shadowLower: none;
   --shadowUpper: none; 
+  --colorOfSun: hsl(3, 100%, 87%);
+  --colorOfDay: auto;
+  --colorOfDate: auto;
   --transTime: 0.1s;
+  --borderColorOfToday: black;
+  --shadowOfToday: none;
   transition: background-color var(--transTime), box-shadow var(--transTime);
 }
+
 .pastel {
   --foregroundColor: hsl(110, 75%, 80%);
+  --backgroundColor: var(--foregroundColor);
   --shadowLower: inset -5px -5px 10px rgba(255, 255, 255, 0.33),
   inset 5px 5px 10px rgba(0, 0, 0, 0.33);
   --shadowUpper: -5px -5px 10px rgba(255, 255, 255, 0.5),
   5px 5px 10px rgba(0, 0, 0, 0.33);
+  --borderColorOfToday: var(--foregroundColor);
+  --shadowOfToday: inset -5px -5px 6px rgba(255, 255, 255, 0.5), inset 5px 5px 6px rgba(0, 0, 0, 0.33),
+  -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33);
+}
+.dark {
+  --foregroundColor: #17151D;
+  --backgroundColor: #000;
+  font-family: "Roboto Slab", serif;
+  --colorOfSun: /* #FF1744 */var(--colorOfDay);
+  --colorOfDay: #FF730B;
+  --colorOfDate: #fff;
+  --shadowLower: none;
+  --shadowUpper: none; 
+  --borderColorOfToday: white;
 }
 body {
-  background-color: var(--foregroundColor);
+  background-color: var(--backgroundColor);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,6 +48,7 @@ body {
 }
 
 #thang {
+  color: var(--colorOfDay);
   margin: 10px;
   font-size: 1.3rem;
 }
@@ -59,6 +82,7 @@ content {
 .week6,
 .nameofdays,
 .nut {
+  color: var(--colorOfDay);
   width: 100%;
   height: 16.6%;
   display: flex;
@@ -75,6 +99,7 @@ content {
 .week6 > * {
   height: var(--sideOfDate);
   width: var(--sideOfDate);
+  color: var(--colorOfDate);
   border-radius: 50%;
   background-color: var(--foregroundColor);
   box-shadow: var(--shadowUpper);
@@ -84,9 +109,8 @@ content {
   border: 0px;
   transition: background-color var(--transTime), box-shadow var(--transTime);
 }
-.thu8,
-.nameofdays > :last-child {
-  background-color: hsl(3, 100%, 87%);
+.thu8{
+  background-color: var(--colorOfSun);
   transition: background-color var(--transTime), box-shadow var(--transTime);
 }
 .nameofdays > *,
@@ -103,11 +127,21 @@ content {
   transition: background-color var(--transTime), box-shadow var(--transTime);
 }
 .nut {
-  width: 350px;
+  width: 100%;
   height: min-content;
+  flex-wrap: wrap;
 }
 .nut > * {
+  height: max-content;
+  flex: 0 0 21%;
   margin: 15px;
+}
+
+.today {
+  box-sizing: border-box; 
+  border: 2px solid var(--borderColorOfToday); 
+  box-shadow: var(--shadowOfToday); 
+  background-color: var(--foregroundColor)
 }
 
 @media only screen and (max-width: 510px) {
@@ -123,8 +157,11 @@ content {
     width: 90vw;
   }
   .nut > * {
-    padding: 10px;
+    padding: 2px;
     border-radius: 20px;
+  }
+  .material-icons {
+    font-size: 1.5rem;
   }
   :root {
     --sideOfDate: calc(0.096 * 100vw);
