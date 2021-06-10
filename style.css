@@ -143,6 +143,12 @@ content {
   box-shadow: var(--shadowOfToday); 
   background-color: var(--foregroundColor)
 }
+.todaySunday {
+  box-sizing: border-box; 
+  border: 2px solid var(--borderColorOfToday); 
+  box-shadow: var(--shadowOfToday); 
+  background-color: var(--colorOfSun)
+}
 
 @media only screen and (max-width: 510px) {
   main {

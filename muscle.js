@@ -61,10 +61,10 @@ function chinh() {
         console.log(ngay.getDate() + " ");
         document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].innerHTML = i;
         document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].classList.remove("today");
-
+        document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].classList.remove("todaySunday");
         if (ngay.getDate() == dt.getDate()) {
             if (dt.getDay() != 0) { document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].classList.add("today") ; }
-            else document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].classList.add("today") ;
+            else document.getElementsByClassName(week[iOfWeek])[0].getElementsByClassName(days[ngay.getDay()])[0].classList.add("todaySunday") ;
         }
         document.getElementsByClassName(week[iOfWeek])[0].style.visibility = "visible";
         if (ngay.getDay() == 0 && ngay.getDate() != lastday(dt.getFullYear(), dt.getMonth())) { iOfWeek++; }
