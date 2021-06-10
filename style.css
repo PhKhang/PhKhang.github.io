@@ -29,7 +29,7 @@
   -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33);
 }
 .dark {
-  --foregroundColor: #17151D;
+  --foregroundColor: hsl(255, 36%, 17%);
   --backgroundColor: #000;
   font-family: "Roboto Slab", serif;
   --colorOfSun: /* #FF1744 */var(--colorOfDay);
@@ -40,11 +40,12 @@
   --borderColorOfToday: white;
 }
 body {
+  padding: 10px;
   background-color: var(--backgroundColor);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color var(--transTime) ease-in-out, box-shadow var(--transTime);
+  transition: background-color var(--transTime), box-shadow var(--transTime);
 }
 
 #thang {
@@ -145,7 +146,7 @@ content {
 }
 .todaySunday {
   box-sizing: border-box; 
-  border: 2px solid var(--borderColorOfToday); 
+  border: 2px solid transparent; 
   box-shadow: var(--shadowOfToday); 
   background-color: var(--colorOfSun)
 }
