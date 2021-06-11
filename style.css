@@ -11,7 +11,7 @@
   --colorOfSun: hsl(3, 100%, 87%);
   --colorOfDay: auto;
   --colorOfDate: auto;
-  --transTime: 0.1s;
+  --transTime: 0.15s;
   --borderColorOfToday: black;
   --shadowOfToday: none;
   transition: background-color var(--transTime), box-shadow var(--transTime);
@@ -24,7 +24,7 @@
   inset 5px 5px 10px rgba(0, 0, 0, 0.33);
   --shadowUpper: -5px -5px 10px rgba(255, 255, 255, 0.5),
   5px 5px 10px rgba(0, 0, 0, 0.33);
-  --borderColorOfToday: var(--foregroundColor);
+  --borderColorOfToday: transparent;
   --shadowOfToday: inset -5px -5px 6px rgba(255, 255, 255, 0.5), inset 5px 5px 6px rgba(0, 0, 0, 0.33),
   -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33);
 }
@@ -146,7 +146,7 @@ content {
 }
 .todaySunday {
   box-sizing: border-box; 
-  border: 2px solid transparent; 
+  border: 2px solid var(--borderColorOfToday); 
   box-shadow: var(--shadowOfToday); 
   background-color: var(--colorOfSun)
 }
