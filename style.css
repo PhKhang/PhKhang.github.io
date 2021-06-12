@@ -11,7 +11,7 @@
   --colorOfSun: hsl(3, 100%, 87%);
   --colorOfDay: auto;
   --colorOfDate: auto;
-  --transTime: 0.15s;
+  --transTime: 0.1s;
   --borderColorOfToday: black;
   --shadowOfToday: none;
   transition: background-color var(--transTime), box-shadow var(--transTime);
